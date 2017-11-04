@@ -1,16 +1,17 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HelloWorldComponent } from './hello-world.component';
+
+import { NgModule, ModuleWithProviders } from '@angular/core';
+
+import { AenigmaStorageService } from './aenigma.service';
 
 @NgModule({
-  declarations: [HelloWorldComponent],
-  imports: [CommonModule],
-  exports: [HelloWorldComponent]
+  imports: [CommonModule]
 })
 export class AenigmaModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: AenigmaModule
+      ngModule: AenigmaModule,
+      providers: [AenigmaStorageService]
     };
   }
 }

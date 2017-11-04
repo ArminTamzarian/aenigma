@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { AenigmaModule } from '../src';
-import { DemoComponent } from './demo.component';
+
+import { FormsModule } from '@angular/forms';
+
+import { AenigmaModule, AenigmaLocalStorageProvider } from '../src';
+
+import { DemoViewComponent } from './demo.view';
 
 @NgModule({
-  declarations: [DemoComponent],
-  imports: [BrowserModule, AenigmaModule.forRoot()],
-  bootstrap: [DemoComponent]
+  declarations: [DemoViewComponent],
+  imports: [BrowserModule, FormsModule, AenigmaModule.forRoot()],
+  providers: [AenigmaLocalStorageProvider],
+  bootstrap: [DemoViewComponent]
 })
 export class DemoModule {}
