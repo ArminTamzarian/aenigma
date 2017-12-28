@@ -1,6 +1,6 @@
 {
   "name": "aenigma",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./bundles/aenigma.umd.js",
   "module": "./index.js",
