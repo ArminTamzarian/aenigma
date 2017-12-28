@@ -40,7 +40,7 @@ import { Component } from '@angular/core';
 export class MyComponent {}
 ```
 
-You may also find it useful to view the [demo source](https://github.com/ArminTamzarian/aenigma/blob/master/demo/demo.component.ts).
+You may also find it useful to view the [demo source](https://github.com/ArminTamzarian/aenigma/blob/master/demo/demo.view.ts).
 
 ### Installation (without a module bundler)
 ```html
@@ -48,6 +48,98 @@ You may also find it useful to view the [demo source](https://github.com/ArminTa
 <script>
     // everything is exported aenigma namespace
 </script>
+```
+
+## Usage
+
+### Set up the desired `AenigmaStorageProvider` implementation
+
+```typescript
+@NgModule({
+  imports: [
+    AenigmaModule.forRoot()
+  ],
+  providers: [
+    AenigmaLocalStorageProvider
+  ]
+})
+```
+
+### Inject the `AenigmaStorageProvider` implementation into your component
+
+```typescript
+constructor(private _encryptedStorageProvider: AenigmaLocalStorageProvider) { }
+```
+
+### In your component create your `Aenigma` object
+
+```typescript
+constructor(private _encryptedStorageProvider: AenigmaLocalStorageProvider) {
+
+  Aenigma.create().subscribe(
+    (aenigma: Aenigma) => {
+      this._aenigma = aenigma;
+    },
+    error => {
+      console.error(error);
+    }
+  );
+}
+```
+
+### Use the Aenigma object to initialize the `AenigmaStorageService` object
+
+```typescript
+constructor(private _encryptedStorageProvider: AenigmaLocalStorageProvider) {
+
+  Aenigma.create().subscribe(
+    (aenigma: Aenigma) => {
+      this._aenigma = aenigma;
+      this._encryptedStorage = new AenigmaStorageService(
+        this._aenigma,
+        this._encryptedStorageProvider
+      );
+    },
+    error => {
+      console.error(error);
+    }
+  );
+}
+```
+
+### Use the `Aenigma` object to encrypt/decrypt data
+```typescript
+this._aenigma
+  .encrypt(plaintext)
+  .subscribe((encrypted: EncryptedValue) => {
+    console.log(encrypted.stringify());
+  });
+```
+
+```typescript
+this._aenigma
+  .decrypt(EncryptedValue.parse(cipher))
+  .subscribe((decrypted: string) => {
+    this._plaintext = decrypted;
+  });
+```
+
+### Use the `AenigmaStorageService` implementation to store/retrieve encrypted data
+
+```typescript
+this._encryptedStorage
+  .store('supersecret', 'secret_id')
+  .subscribe((encrypted: EncryptedValue) => {
+    console.log(encrypted.stringify());
+  });
+```
+
+```typescript
+this._encryptedStorage
+  .retrieve('secret_id')
+  .subscribe((plaintext: string) => {
+    console.log(plaintext);
+  });
 ```
 
 ## Development
@@ -66,6 +158,9 @@ Run `npm start` to start a development server on port 8000 with auto reload + te
 
 Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
 
+### Documentation
+
+Library and API documentation is available at https://armintamzarian.github.io/aenigma/
 ## Release Notes
 
 ### 0.1.0
