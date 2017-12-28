@@ -15,7 +15,7 @@ export class Aenigma {
         Credentials.FORMAT,
         credentials.key,
         {
-          name: Credentials.algorithm
+          name: Credentials.ALGORITHM
         },
         true,
         ['encrypt', 'decrypt']
@@ -58,12 +58,12 @@ export class Aenigma {
     return Observable.create((observer: Observer<EncryptedValue>): PromiseLike<
       void
     > => {
-      const iv: Uint8Array = new Uint8Array(12);
+      const iv: Uint8Array = new Uint8Array(Credentials.BLOCK_SIZE);
       window.crypto.getRandomValues(iv);
 
       return (<Promise<ArrayBuffer>>window.crypto.subtle.encrypt(
         {
-          name: Credentials.algorithm,
+          name: Credentials.ALGORITHM,
           iv
         },
         context._key,
@@ -86,7 +86,7 @@ export class Aenigma {
     > => {
       return (<Promise<ArrayBuffer>>window.crypto.subtle.decrypt(
         {
-          name: Credentials.algorithm,
+          name: Credentials.ALGORITHM,
           iv: value.iv
         },
         context._key,

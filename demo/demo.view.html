@@ -4,7 +4,7 @@
     <div class="input-group">
       <input type="text" class="form-control" id="jwk" [(ngModel)]="_jwk" />
       <span class="input-group-btn">
-        <button class="btn" type="button">Update</button>
+        <button class="btn btn-default" (click)="generate()" type="button">Generate Credentials</button>
       </span>
     </div>
   </div>
@@ -16,7 +16,7 @@
     <div class="input-group">
       <input type="text" class="form-control" id="plaintext" [(ngModel)]="_plaintext" />
       <span class="input-group-btn">
-        <button class="btn" (click)="encrypt(_plaintext)">Encrypt</button>
+        <button class="btn btn-default" (click)="encrypt(_plaintext)" [disabled]="!_plaintext">Encrypt</button>
       </span>
     </div>
   </div>
@@ -28,7 +28,7 @@
     <div class="input-group">
       <input type="text" class="form-control" id="encrypted" [(ngModel)]="_encrypted" />
       <span class="input-group-btn">
-        <button class="btn" (click)="decrypt(_encrypted)">Decrypt</button>
+        <button class="btn btn-default" (click)="decrypt(_encrypted)" [disabled]="!_encrypted">Decrypt</button>
       </span>
     </div>
   </div>

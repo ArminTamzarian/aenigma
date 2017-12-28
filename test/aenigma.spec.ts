@@ -138,26 +138,26 @@ describe('Credentials', () => {
 describe('EncryptedValue', () => {
   it('EncryptedValue / parse : encrypted value parsing', () => {
     const json = {
-      data: '��ᐪ刌㍐럁瞈㫆䉣뵢萢홤擋�魤燉ऴ龬뮏鹺珄ꍿॐ䬝䇒ਡᾈ䋷賖᳾ꤢ㍅뗋໿࣎쨿뵒ʐ瀙琩䄂㇕霬',
-      iv: '萵펝㇊꿦茎䮬'
+      data: 'tLc6kFa4vgPJJoxkIK1CIDF4HuHqxTxHSgJ5Xw==',
+      iv: 'xs1Nqc9MP0gWLnzj'
     };
 
     const encrypted = EncryptedValue.parse(JSON.stringify(json));
     expect(encrypted).to.not.be.undefined;
 
     expect(encrypted.data).to.not.be.undefined;
-    expect(AenigmaUtil.arrayBufferToString(encrypted.data)).to.equal(json.data);
+    expect(AenigmaUtil.arrayBufferToBase64(encrypted.data)).to.equal(json.data);
 
     expect(encrypted.iv).to.not.be.undefined;
-    expect(AenigmaUtil.arrayBufferToString(encrypted.iv.buffer)).to.equal(
+    expect(AenigmaUtil.arrayBufferToBase64(encrypted.iv.buffer)).to.equal(
       json.iv
     );
   });
 
   it('EncryptedValue / stringify : encrypted value stringify', () => {
     const json = {
-      data: '��ᐪ刌㍐럁瞈㫆䉣뵢萢홤擋�魤燉ऴ龬뮏鹺珄ꍿॐ䬝䇒ਡᾈ䋷賖᳾ꤢ㍅뗋໿࣎쨿뵒ʐ瀙琩䄂㇕霬',
-      iv: '萵펝㇊꿦茎䮬'
+      data: 'tLc6kFa4vgPJJoxkIK1CIDF4HuHqxTxHSgJ5Xw==',
+      iv: 'xs1Nqc9MP0gWLnzj'
     };
 
     const encrypted = EncryptedValue.parse(JSON.stringify(json));

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   Aenigma,
   AenigmaUtil,
+  Credentials,
   EncryptedValue,
   AenigmaStorageService,
   AenigmaLocalStorageProvider
@@ -13,6 +14,8 @@ import {
   templateUrl: './demo/demo.view.html'
 })
 export class DemoViewComponent {
+  private static _CREDENTIALS_JWK_KEY: string = 'AENIGMA_CREDENTIALS_JWK';
+
   private _aenigma: Aenigma;
   private _encryptedStorage: AenigmaStorageService;
 
@@ -21,8 +24,29 @@ export class DemoViewComponent {
   private _encrypted: string;
 
   constructor(private _encryptedStorageProvider: AenigmaLocalStorageProvider) {
-    Aenigma.create().subscribe(
+    const jwk: any = localStorage.getItem(
+      DemoViewComponent._CREDENTIALS_JWK_KEY
+    );
+
+    if (!jwk) {
+      this.generate();
+    } else {
+      Credentials.import(
+        JSON.parse(jwk)
+      ).subscribe((credentials: Credentials) => {
+        this.generate(credentials);
+      });
+    }
+  }
+
+  public generate(credentials?: Credentials): void {
+    Aenigma.create(credentials).subscribe(
       (aenigma: Aenigma) => {
+        localStorage.setItem(
+          DemoViewComponent._CREDENTIALS_JWK_KEY,
+          JSON.stringify(aenigma.credentials.key)
+        );
+
         this._jwk = JSON.stringify(aenigma.credentials.key);
         this._aenigma = aenigma;
         this._encryptedStorage = new AenigmaStorageService(

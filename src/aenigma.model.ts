@@ -5,7 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import { AenigmaUtil } from './aenigma.util';
 
 export class Credentials {
-  public static readonly algorithm = 'AES-GCM';
+  public static readonly ALGORITHM: string = 'AES-GCM';
+  public static readonly BLOCK_SIZE: number = 16;
   public static readonly FORMAT: string = 'jwk';
 
   private _key: JsonWebKey;
@@ -14,7 +15,7 @@ export class Credentials {
     function generateKey(observer: Observer<Credentials>): Promise<void> {
       return (<Promise<CryptoKey>>window.crypto.subtle.generateKey(
         {
-          name: Credentials.algorithm,
+          name: Credentials.ALGORITHM,
           length: keyLength
         },
         true,
@@ -42,7 +43,7 @@ export class Credentials {
         Credentials.FORMAT,
         jwk,
         {
-          name: Credentials.algorithm
+          name: Credentials.ALGORITHM
         },
         true,
         ['encrypt', 'decrypt']
@@ -81,8 +82,8 @@ export class EncryptedValue {
     );
 
     return new EncryptedValue(
-      AenigmaUtil.stringToArrayBuffer(encryptedValueJson.data),
-      new Uint8Array(AenigmaUtil.stringToArrayBuffer(encryptedValueJson.iv))
+      AenigmaUtil.base64ToArrayBuffer(encryptedValueJson.data),
+      new Uint8Array(AenigmaUtil.base64ToArrayBuffer(encryptedValueJson.iv))
     );
   }
 
@@ -91,8 +92,8 @@ export class EncryptedValue {
   public stringify(): string {
     return JSON.stringify(
       new EncryptedValueJson(
-        AenigmaUtil.arrayBufferToString(this.data),
-        AenigmaUtil.arrayBufferToString(this.iv.buffer)
+        AenigmaUtil.arrayBufferToBase64(this.data),
+        AenigmaUtil.arrayBufferToBase64(this.iv.buffer)
       )
     );
   }

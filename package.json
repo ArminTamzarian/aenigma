@@ -1,7 +1,7 @@
 {
   "name": "aenigma",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "User friendly Angular encryption library leveraging the Web Cryptography API.",
   "main": "./bundles/aenigma.umd.js",
   "module": "./index.js",
   "typings": "./index.d.ts",
@@ -40,14 +40,16 @@
   },
   "keywords": [
     "angular2",
-    "angular"
+    "angular",
+    "crypto",
+    "cryptography"
   ],
   "author": "Armin Tamzarian",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ArminTamzarian/aenigma/issues"
   },
-  "homepage": "https://github.com/ArminTamzarian/aenigma#readme",
+  "homepage": "https://github.com/ArminTamzarian/aenigma",
   "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -116,5 +118,9 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@types/base64-js": "^1.2.5",
+    "base64-js": "^1.2.1"
   }
 }

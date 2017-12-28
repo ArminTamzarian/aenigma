@@ -1,3 +1,5 @@
+import * as base64js from 'base64-js';
+
 export class AenigmaUtil {
   public static stringToArrayBuffer(str: string): ArrayBuffer {
     const buffer: ArrayBuffer = new ArrayBuffer(str.length * 2);
@@ -12,5 +14,14 @@ export class AenigmaUtil {
 
   public static arrayBufferToString(buffer: ArrayBuffer): string {
     return String.fromCharCode.apply(null, new Uint16Array(buffer));
+  }
+
+  public static base64ToArrayBuffer(str: string): ArrayBuffer {
+    const array: Uint8Array = base64js.toByteArray(str);
+    return array.buffer;
+  }
+
+  public static arrayBufferToBase64(buffer: ArrayBuffer): string {
+    return base64js.fromByteArray(new Uint8Array(buffer));
   }
 }
