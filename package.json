@@ -19,7 +19,7 @@
     "gh-pages": "git checkout gh-pages && git merge master --no-edit --no-ff && del-cli *.js *.js.map && npm run build:demo && npm run compodoc && git add . && git commit -m \"chore: build demo and docs\" && git push && git checkout master",
     "copyfiles": "copyfiles package.json LICENSE README.md CHANGELOG.md dist",
     "prerelease": "npm test",
-    "release:git": "git add package.json && git commit -m \"chore: bump version number\" && ./node_modules/standard-version/bin/cli.js --first-release && git push --follow-tags origin master",
+    "release:git": "./node_modules/standard-version/bin/cli.js && git add package.json && git commit -m \"chore: bump version number\" && git push --follow-tags origin master",
     "release:npm": "npm run build:dist && npm run copyfiles && npm publish dist",
     "release": "npm run release:git && npm run release:npm",
     "postrelease": "npm run build:clean && npm run gh-pages",
