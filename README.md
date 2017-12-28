@@ -161,11 +161,6 @@ Run `npm test` to run tests once or `npm run test:watch` to continually run test
 ### Documentation
 
 Library and API documentation is available at https://armintamzarian.github.io/aenigma/
-## Release Notes
-
-### 0.1.0
-
-* Initial Release
 
 ## License
 
