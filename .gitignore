@@ -1,6 +1,14 @@
-.idea/
 .DS_Store
-node_modules/
+.editorconfig
+.idea/
+.npmrc
+.yo-rc.json
+appcache/
 coverage/
-npm-debug.log
+docs/
 dist/
+index.html
+main-*
+node_modules/
+npm-debug.log
+sw.js
