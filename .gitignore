@@ -6,7 +6,6 @@
 appcache/
 coverage/
 dist/
-index.html
 main-*
 node_modules/
 npm-debug.log
