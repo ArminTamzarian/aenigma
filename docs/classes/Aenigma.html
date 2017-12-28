@@ -1,0 +1,813 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aenigma documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aenigma documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">aenigma documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                        <a href="../changelog.html"
+                                    >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
+                                <li class="link">
+                                        <a href="../license.html"
+                                    >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AenigmaModule.html" >AenigmaModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/Aenigma.html"  data-type="entity-link" class="active" >Aenigma</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/AenigmaStorageProvider.html" >AenigmaStorageProvider</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/AenigmaUtil.html" >AenigmaUtil</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Credentials.html" >Credentials</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/EncryptedValue.html" >EncryptedValue</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/EncryptedValueJson.html" >EncryptedValueJson</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/AenigmaLocalStorageProvider.html" >AenigmaLocalStorageProvider</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/AenigmaStorageService.html" >AenigmaStorageService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+            
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">aenigma documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                               <a href="../changelog.html"
+                                           >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                               <a href="../license.html"
+                                           >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AenigmaModule.html" >AenigmaModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/Aenigma.html"  data-type="entity-link" class="active" >Aenigma</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/AenigmaStorageProvider.html" >AenigmaStorageProvider</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/AenigmaUtil.html" >AenigmaUtil</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Credentials.html" >Credentials</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/EncryptedValue.html" >EncryptedValue</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/EncryptedValueJson.html" >EncryptedValueJson</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/AenigmaLocalStorageProvider.html" >AenigmaLocalStorageProvider</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/AenigmaStorageService.html" >AenigmaStorageService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>Aenigma</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/aenigma.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+                <h3 id="index">Index</h3>
+                <table class="table table-sm table-bordered index-table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Methods</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                            <span class="modifier">Static</span>
+                                        <a href="#create">create</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#decrypt">decrypt</a>
+                                    </li>
+                                    <li>
+                                            <span class="modifier">Public</span>
+                                        <a href="#encrypt">encrypt</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Accessors</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                        <a href="#credentials">credentials</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section>
+                
+                    <h3 id="methods">
+                        Methods
+                    </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="create"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Static</span>
+                                        create
+                                        </b>
+                                        <a href="#create"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>create(credentials?: <a href="../classes/Credentials.html">Credentials</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/aenigma.ts:44</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Instantiate a new instance of the <code>Aenigma</code> encryption management object</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>credentials</td>
+                                                              <td>
+                                                                      <code><a href="../classes/Credentials.html" target="_self" >Credentials</a></code>
+                                                              </td>
+                                                              <td>
+                                                                  true
+                                                              </td>
+                                                              <td><p>Optional <code>Credentials</code> object used for encryption and decryption routines. If no object is provided a new one will be created.</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="../classes/Aenigma.html" target="_self" >Observable&lt;Aenigma&gt;</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="decrypt"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        decrypt
+                                        </b>
+                                        <a href="#decrypt"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>decrypt(value: <a href="../classes/EncryptedValue.html">EncryptedValue</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/aenigma.ts:113</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Decrypt the provided value</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>value</td>
+                                                              <td>
+                                                                      <code><a href="../classes/EncryptedValue.html" target="_self" >EncryptedValue</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p><code>EncryptedValue</code> representing the encrypted state of the data</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>Observable&lt;string&gt;</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="encrypt"></a>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        encrypt
+                                        </b>
+                                        <a href="#encrypt"><span class="fa fa-link"></span></a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>encrypt(data: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/aenigma.ts:80</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Encrypt the provided data</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>data</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Javascript string data to encrypt</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="../classes/EncryptedValue.html" target="_self" >Observable&lt;EncryptedValue&gt;</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+
+            <section>
+                <h3 id="accessors">
+                    Accessors
+                </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="credentials"></a>
+                                    <span class="name"><b>credentials</b><a href="#credentials"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="accessor"><b>get</b><code>credentials()</code></span>
+                                </td>
+                            </tr>
+                                        <tr>
+                                            <td class="col-md-4">
+                                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/aenigma.ts:69</a></div>
+                                            </td>
+                                        </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">import { Observer } from &#x27;rxjs/Observer&#x27;;
+
+import { Observable } from &#x27;rxjs/Observable&#x27;;
+
+import { Credentials, EncryptedValue } from &#x27;./aenigma.model&#x27;;
+
+import { AenigmaUtil } from &#x27;./aenigma.util&#x27;;
+
+/**
+ *
+ */
+export class Aenigma {
+  private static _create(credentials: Credentials): Observable&lt;Aenigma&gt; {
+    function create(observer: Observer&lt;Aenigma&gt;): PromiseLike&lt;void&gt; {
+      return (&lt;Promise&lt;
+        CryptoKey
+      &gt;&gt;window.crypto.subtle.importKey(
+        Credentials.FORMAT,
+        credentials.key,
+        {
+          name: Credentials.ALGORITHM
+        },
+        true,
+        [&#x27;encrypt&#x27;, &#x27;decrypt&#x27;]
+      ))
+        .then((key: CryptoKey) &#x3D;&gt; {
+          observer.next(new Aenigma(credentials, key));
+        })
+        .catch((error: any) &#x3D;&gt; {
+          observer.error(error.message);
+        });
+    }
+
+    return Observable.create(create);
+  }
+
+  /**
+   * Instantiate a new instance of the &#x60;Aenigma&#x60; encryption management object
+   *
+   * @param credentials Optional &#x60;Credentials&#x60; object used for encryption and decryption routines. If no object is provided a new one will be created.
+   *
+   * @return  Observable containing the newly instatiated &#x60;Aenigma&#x60; object
+   */
+  public static create(credentials?: Credentials): Observable&lt;Aenigma&gt; {
+    if (credentials) {
+      return Aenigma._create(credentials);
+    } else {
+      return Credentials.generate().mergeMap(
+        (newCredentials: Credentials): Observable&lt;Aenigma&gt; &#x3D;&gt; {
+          return Aenigma._create(newCredentials);
+        }
+      );
+    }
+  }
+
+  /**
+   * Protected tandard constructor for the &#x60;Aenigma&#x60; class
+   *
+   * __Note:__ This constructor should not be instantiated directly and should instead be delegated through the &#x60;Aenigma.create&#x60; interface
+   *
+   * @param _credentials a &#x60;Credentials&#x60; object with associated encryption credentials
+   * @param _key a &#x60;CryptoKey&#x60; object which is used to perform the actual encryption and decryption of data
+   */
+  private constructor(
+    protected _credentials: Credentials,
+    protected _key: CryptoKey
+  ) {}
+
+  get credentials(): Credentials {
+    return this._credentials;
+  }
+
+  /**
+   * Encrypt the provided data
+   *
+   * @param data  Javascript string data to encrypt
+   *
+   * @return  Observable containing the &#x60;EncryptedValue&#x60; representing the encrypted state of the provided data
+   */
+  public encrypt(data: string): Observable&lt;EncryptedValue&gt; {
+    const context &#x3D; this;
+
+    return Observable.create((observer: Observer&lt;EncryptedValue&gt;): PromiseLike&lt;
+      void
+    &gt; &#x3D;&gt; {
+      const iv: Uint8Array &#x3D; new Uint8Array(Credentials.BLOCK_SIZE);
+      window.crypto.getRandomValues(iv);
+
+      return (&lt;Promise&lt;ArrayBuffer&gt;&gt;window.crypto.subtle.encrypt(
+        {
+          name: Credentials.ALGORITHM,
+          iv
+        },
+        context._key,
+        AenigmaUtil.stringToArrayBuffer(data)
+      ))
+        .then((encrypted: ArrayBuffer) &#x3D;&gt; {
+          observer.next(new EncryptedValue(encrypted, iv));
+        })
+        .catch((error: any) &#x3D;&gt; {
+          observer.error(error.message);
+        });
+    });
+  }
+
+  /**
+   * Decrypt the provided value
+   *
+   * @param value  &#x60;EncryptedValue&#x60; representing the encrypted state of the data
+   *
+   * @return  Observable containing decrypted value of the data
+   */
+  public decrypt(value: EncryptedValue): Observable&lt;string&gt; {
+    const context &#x3D; this;
+
+    return Observable.create((observer: Observer&lt;string&gt;): PromiseLike&lt;
+      void
+    &gt; &#x3D;&gt; {
+      return (&lt;Promise&lt;ArrayBuffer&gt;&gt;window.crypto.subtle.decrypt(
+        {
+          name: Credentials.ALGORITHM,
+          iv: value.iv
+        },
+        context._key,
+        value.data
+      ))
+        .then((decrypted: ArrayBuffer) &#x3D;&gt; {
+          observer.next(AenigmaUtil.arrayBufferToString(decrypted));
+        })
+        .catch((error: any) &#x3D;&gt; {
+          observer.error(error.message);
+        });
+    });
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>

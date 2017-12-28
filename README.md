@@ -1,28 +1,15 @@
 # aenigma
+
+User-friendly [AngularJS](https://angularjs.org/) encryption module utilizing the [Web Cryptography API](https://www.w3.org/TR/WebCryptoAPI/) and providing an extensible secure secret storage mechanism.
+
 [![Build Status](https://travis-ci.org/ArminTamzarian/aenigma.svg?branch=master)](https://travis-ci.org/ArminTamzarian/aenigma)
 [![codecov](https://codecov.io/gh/ArminTamzarian/aenigma/branch/master/graph/badge.svg)](https://codecov.io/gh/ArminTamzarian/aenigma)
 [![npm version](https://badge.fury.io/js/aenigma.svg)](http://badge.fury.io/js/aenigma)
-[![devDependency Status](https://david-dm.org/ArminTamzarian/aenigma/dev-status.svg)](https://david-dm.org/ArminTamzarian/aenigma?type=dev)
-[![GitHub issues](https://img.shields.io/github/issues/ArminTamzarian/aenigma.svg)](https://github.com/ArminTamzarian/aenigma/issues)
-[![GitHub stars](https://img.shields.io/github/stars/ArminTamzarian/aenigma.svg)](https://github.com/ArminTamzarian/aenigma/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ArminTamzarian/aenigma/master/LICENSE)
 
-## Demo
-https://ArminTamzarian.github.io/aenigma/
+## Getting Started
 
-## Table of contents
-
-- [About](#about)
-- [Installation](#installation)
-- [Documentation](#documentation)
-- [Development](#development)
-- [License](#license)
-
-## About
-
-
-
-## Installation
+### Installation
 
 Install through npm:
 ```
@@ -55,36 +42,44 @@ export class MyComponent {}
 
 You may also find it useful to view the [demo source](https://github.com/ArminTamzarian/aenigma/blob/master/demo/demo.component.ts).
 
-### Usage without a module bundler
-```
+### Installation (without a module bundler)
+```html
 <script src="node_modules/aenigma/bundles/aenigma.umd.js"></script>
 <script>
     // everything is exported aenigma namespace
 </script>
 ```
 
-## Documentation
-All documentation is auto-generated from the source via [compodoc](https://compodoc.github.io/compodoc/) and can be viewed here:
-https://ArminTamzarian.github.io/aenigma/docs/
-
 ## Development
 
 ### Prepare your environment
-* Install [Node.js](http://nodejs.org/) and NPM
-* Install local dev dependencies: `npm install` while current directory is this repo
+
+Install [Node.js](http://nodejs.org/) and NPM
+
+Install local dev dependencies: `npm install` while current directory is this repo
 
 ### Development server
+
 Run `npm start` to start a development server on port 8000 with auto reload + tests.
 
 ### Testing
+
 Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
 
-### Release
-* Bump the version in package.json (once the module hits 1.0 this will become automatic)
-```bash
-npm run release
-```
+## Release Notes
+
+### 0.1.0
+
+* Initial Release
 
 ## License
 
-MIT
+(The MIT License)
+
+Copyright (c) 2017 Armin Tamzarian
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

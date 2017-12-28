@@ -6,6 +6,9 @@ import { Credentials, EncryptedValue } from './aenigma.model';
 
 import { AenigmaUtil } from './aenigma.util';
 
+/**
+ *
+ */
 export class Aenigma {
   private static _create(credentials: Credentials): Observable<Aenigma> {
     function create(observer: Observer<Aenigma>): PromiseLike<void> {
@@ -31,6 +34,13 @@ export class Aenigma {
     return Observable.create(create);
   }
 
+  /**
+   * Instantiate a new instance of the `Aenigma` encryption management object
+   *
+   * @param credentials Optional `Credentials` object used for encryption and decryption routines. If no object is provided a new one will be created.
+   *
+   * @return  Observable containing the newly instatiated `Aenigma` object
+   */
   public static create(credentials?: Credentials): Observable<Aenigma> {
     if (credentials) {
       return Aenigma._create(credentials);
@@ -43,6 +53,14 @@ export class Aenigma {
     }
   }
 
+  /**
+   * Protected tandard constructor for the `Aenigma` class
+   *
+   * __Note:__ This constructor should not be instantiated directly and should instead be delegated through the `Aenigma.create` interface
+   *
+   * @param _credentials a `Credentials` object with associated encryption credentials
+   * @param _key a `CryptoKey` object which is used to perform the actual encryption and decryption of data
+   */
   private constructor(
     protected _credentials: Credentials,
     protected _key: CryptoKey
@@ -52,6 +70,13 @@ export class Aenigma {
     return this._credentials;
   }
 
+  /**
+   * Encrypt the provided data
+   *
+   * @param data  Javascript string data to encrypt
+   *
+   * @return  Observable containing the `EncryptedValue` representing the encrypted state of the provided data
+   */
   public encrypt(data: string): Observable<EncryptedValue> {
     const context = this;
 
@@ -78,6 +103,13 @@ export class Aenigma {
     });
   }
 
+  /**
+   * Decrypt the provided value
+   *
+   * @param value  `EncryptedValue` representing the encrypted state of the data
+   *
+   * @return  Observable containing decrypted value of the data
+   */
   public decrypt(value: EncryptedValue): Observable<string> {
     const context = this;
 

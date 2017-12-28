@@ -5,7 +5,6 @@
 .yo-rc.json
 appcache/
 coverage/
-docs/
 dist/
 index.html
 main-*
