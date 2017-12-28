@@ -4,6 +4,9 @@
     "directive-selector": [true, "attribute", "aenigma", "camelCase"],
     "component-selector": [true, "element", "aenigma", "kebab-case"],
     "pipe-naming": [true, "camelCase", "aenigma"],
-    "no-inferrable-types": false
+    "no-inferrable-types": false,
+    "no-unused-expression": false,
+    "max-classes-per-file": false,
+    "no-angle-bracket-type-assertion": false
   }
 }
